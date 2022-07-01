@@ -7,6 +7,7 @@ public class NotificationCommandDto {
 	private String title;
 	private String message;
 	private UUID userId;
+	
 	public String getTitle() {
 		return title;
 	}
@@ -26,6 +27,4 @@ public class NotificationCommandDto {
 		this.userId = userId;
 	}
 	
-	
-
 }

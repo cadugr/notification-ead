@@ -7,7 +7,7 @@ spring:
   application:
     name: ead-notification-service
   config:
-    import: 'optional:configserver:'
+    import: 'configserver:'
   cloud:
     config:
       discovery:
@@ -49,7 +49,7 @@ ead:
       notificationCommandQueue:
         name: ead.notificationcommand.ms.notification
     key:
-      notificationCommandKey: ms.notification      
+      notificationCommandKey: ms.notification 
 
 
 management:
