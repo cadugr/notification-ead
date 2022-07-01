@@ -9,3 +9,6 @@ spring:
     config:
       discovery:
         serviceId: ead-config-server
+      username: configserver
+      password: 'ead123cs' 
+      #propriedades de user e password para que o servico possa se conectar no config-server 
