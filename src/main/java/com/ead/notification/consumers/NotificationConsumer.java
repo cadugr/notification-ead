@@ -8,9 +8,7 @@ import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.BeanUtils;
-import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
@@ -39,12 +37,6 @@ public class NotificationConsumer {
         notificationModel.setCreationDate(LocalDateTime.now(ZoneId.of("UTC")));
         notificationModel.setNotificationStatus(NotificationStatus.CREATED);
         notificationService.saveNotification(notificationModel);
-    }
-    
-    //TODO: Entender o motivo desta necessidade
-    @Bean
-    public Jackson2JsonMessageConverter converter() {
-        return new Jackson2JsonMessageConverter();
     }
 
 } 
